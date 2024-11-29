@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmart Sales Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #00aae2;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .plot {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .plot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .plot h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dmart Sales Analysis</h1>
+    </header>
+    <div class="container">
+        <!-- Sales Distribution Plot -->
+        <div class="plot">
+            <h2>Sales Distribution</h2>
+            <img src="{{ plots['sales_distribution'] }}" alt="Sales Distribution">
+        </div>
+        <!-- Fat Content Distribution Plot -->
+        <div class="plot">
+            <h2>Fat Content Distribution</h2>
+            <img src="{{ plots['fat_content_distribution'] }}" alt="Fat Content Distribution">
+        </div>
+        <!-- Item Type Distribution Plot -->
+        <div class="plot">
+            <h2>Item Type Distribution</h2>
+            <img src="{{ plots['item_type_distribution'] }}" alt="Item Type Distribution">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Dmart Sales Analysis</p>
+    </footer>
+</body>
+</html>
